@@ -14,4 +14,13 @@ const images = [
 ];
 
 const imagesContainerEl = document.querySelector('.gallery');
-console.log(imagesContainerEl);
+// console.log(imagesContainerEl);
+
+const markup = images.map(({url, alt}) => `<li><img scr="${url}" alt="${alt}"></li>`).join("");
+// console.log(markup);
+
+imagesContainerEl.insertAdjacentHTML("beforeend", markup);
+
+imagesContainerEl.style.listStyle = "none";
+imagesContainerEl.style.display = "flex";
+imagesContainerEl.style.gap = "20px";
