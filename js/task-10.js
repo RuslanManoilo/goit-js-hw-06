@@ -2,8 +2,6 @@ const inputElem = document.querySelector('input');
 const createElem = document.querySelector('[data-create]');
 const destroyElem = document.querySelector('[data-destroy]');
 const boxesElem = document.querySelector('#boxes');
-// console.dir(inputElem)
-
 
 createElem.addEventListener('click', createBoxes);
 
@@ -14,9 +12,6 @@ function createBoxes() {
   for (let i = 1; i <= numberTest; i++) {
     const pushElem = amount.push(i); 
   }
-
-  // console.log(numberTest);
-  // console.log(amount);
 
   const markup = amount
     .map(elem => 
@@ -29,12 +24,8 @@ function createBoxes() {
       </div>`)
     .join("");
 
-  // console.log(markup);
-
   boxesElem.insertAdjacentHTML("beforeend", markup);
 }
-
-
 
 destroyElem.addEventListener('click', destroyBoxes);
 function destroyBoxes() {

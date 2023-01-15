@@ -1,7 +1,3 @@
-// Напиши скрипт, який під час втрати фокусу на інпуті 
-// (подія blur), перевіряє його вміст щодо правильної 
-// кількості введених символів.
-
 const inputElem = document.querySelector('#validation-input');
 console.log(inputElem);
 const inputLength = Number(inputElem.dataset.length);
@@ -28,5 +24,6 @@ function onInputBlur(event) {
         inputElem.classList.remove('invalid');    
     } else {
         inputElem.classList.add('invalid');
+        inputElem.classList.remove('valid'); 
     }
 }
